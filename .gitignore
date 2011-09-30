@@ -1,0 +1,9 @@
+hello-scala/.classpath
+hello-scala/.settings
+hello-scala/.project
+hello-scala/.scala_dependencies
+hello-scala/.target/*
+hello-scala/.scala
+hello-scala/target/*
+hello-scala/project/*
+
