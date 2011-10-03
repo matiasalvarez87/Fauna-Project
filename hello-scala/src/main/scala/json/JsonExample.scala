@@ -24,4 +24,6 @@ object JsonExample extends Application {
 	println("\n\n" + compact(render(json)))
 	
 	println("\n\n" + pretty(render(json)))
+	
+	println("\n\n" + new Parser().parsePerson())
 }
