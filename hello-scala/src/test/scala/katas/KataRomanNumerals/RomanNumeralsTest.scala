@@ -19,31 +19,67 @@ class RomanNumeralsTest extends FlatSpec with ShouldMatchers {
 		romanNumerals.convert(9) should equal ("IX")
 	} */
 	
-	"A Roman Numeral Converter" should "return ('1') when decomposeDecimals('1') is called" in {
+	"A method RomanNumerals.decomposeDecimals" should "('1') should return ('1')" in {
 	 	romanNumerals.decomposeDecimals("1".toList, 0) should equal ("1"::Nil)
 	}
 
-	it should "return ('10', '0') when decomposeDecimals('10') is called" in {
+	it should "('10') should return ('10', '0')" in {
 	 	romanNumerals.decomposeDecimals("10".toList, 1) should equal ("10"::"0"::Nil)
 	}
 	
-	it should "return ('100', '0', '0') when decomposeDecimals('100') is called" in {
+	it should "('100') should return ('100', '0', '0')" in {
 	 	romanNumerals.decomposeDecimals("100".toList, 2) should equal ("100"::"0"::"0"::Nil)
 	}
 	
-	it should "return ('100', '50', '4') when decomposeDecimals('154') is called" in {
+	it should "('154') should return ('100', '50', '4')" in {
 	 	romanNumerals.decomposeDecimals("154".toList, 2) should equal ("100"::"50"::"4"::Nil)
 	}
 	
-	it should "return ('9000', '700', '20', '0') when decomposeDecimals('9720') is called" in {
+	it should "('9720') should return ('9000', '700', '20', '0')" in {
 	 	romanNumerals.decomposeDecimals("9720".toList, 3) should equal ("9000"::"700"::"20"::"0"::Nil)
 	}
 	
-	it should "return ('100000', '0', '0', '0', '0', '0') when decomposeDecimals('100000') is called" in {
+	it should "('100000') should return ('100000', '0', '0', '0', '0', '0')" in {
 	 	romanNumerals.decomposeDecimals("100000".toList, 5) should equal ("100000"::"0"::"0"::"0"::"0"::"0"::Nil)
 	}
 	
-	it should "return ('5000000', '700000', '20000', '1000', '600', '30', '9') when decomposeDecimals('5721639') is called" in {
+	it should "('5721639') should return ('5000000', '700000', '20000', '1000', '600', '30', '9')" in {
 	 	romanNumerals.decomposeDecimals("5721639".toList, 6) should equal ("5000000"::"700000"::"20000"::"1000"::"600"::"30"::"9"::Nil)
 	}
+
+	"A method RomanNumerals.composeRoman" should "(List('1')) should return ('I')" in {
+	 	romanNumerals.composeRoman(List("1")) should equal ("I")
+	}
+	
+	it should "(List('2')) should return ('II')" in {
+	 	romanNumerals.composeRoman(List("2")) should equal ("II")
+	}
+	
+	it should "(List('10', '0')) should return ('X')" in {
+	 	romanNumerals.composeRoman(List("10", "0")) should equal ("X")
+	}
+	
+	it should "(List('10', '1')) should return ('XI')" in {
+	 	romanNumerals.composeRoman(List("10", "1")) should equal ("XI")
+	}
+	
+	it should "(List('100', '10', '1')) should return ('CXI')" in {
+	 	romanNumerals.composeRoman(List("100", "10", "1")) should equal ("CXI")
+	}
+	
+	// "A method RomanNumerals.getContext" should "('1') should return (1)" in {
+	 	// romanNumerals.getContext("1") should equal (1)
+	// }
+	
+	// it should "('2') should return (2)" in {
+	 	// romanNumerals.getContext("2") should equal (2)
+	// }
+	
+	// it should "('20') should return (2)" in {
+	 	// romanNumerals.getContext("20") should equal (2)
+	// }
+	
+	// it should "('300') should return (3)" in {
+	 	// romanNumerals.getContext("300") should equal (3)
+	// }
 }
