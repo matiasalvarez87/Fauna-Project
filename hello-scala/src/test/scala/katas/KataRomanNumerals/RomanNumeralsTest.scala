@@ -55,6 +55,33 @@ class RomanNumeralsTest extends FlatSpec with ShouldMatchers {
 	 	romanNumerals.composeRoman(List("2")) should equal ("II")
 	}
 	
+	it should "(List('3')) should return ('III')" in {
+	 	romanNumerals.composeRoman(List("3")) should equal ("III")
+	}
+	
+	it should "(List('4')) should return ('IV')" in {
+	 	romanNumerals.composeRoman(List("4")) should equal ("IV")
+	}
+	
+	it should "(List('5')) should return ('V')" in {
+	 	romanNumerals.composeRoman(List("5")) should equal ("V")
+	}	
+	
+	it should "(List('6')) should return ('VI')" in {
+	 	romanNumerals.composeRoman(List("6")) should equal ("VI")
+	}
+	
+	it should "(List('7')) should return ('VII')" in {
+	 	romanNumerals.composeRoman(List("7")) should equal ("VII")
+	}	
+	
+	it should "(List('8')) should return ('VIII')" in {
+	 	romanNumerals.composeRoman(List("8")) should equal ("VIII")
+	}	
+	it should "(List('9')) should return ('IX')" in {
+	 	romanNumerals.composeRoman(List("9")) should equal ("IX")
+	}
+	
 	it should "(List('10', '0')) should return ('X')" in {
 	 	romanNumerals.composeRoman(List("10", "0")) should equal ("X")
 	}

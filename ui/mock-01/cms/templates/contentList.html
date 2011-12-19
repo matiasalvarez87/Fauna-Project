@@ -1,0 +1,30 @@
+<!-- CONTENTS FORM --
+<div id="dialog-form" title="Create new content">
+	<p class="validateTips">All form fields are required.</p>
+
+	<form id="content-form">
+	<fieldset>
+		<label for="name">Name</label>
+		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+		<label for="subtitle">Subtitle</label>
+		<input type="text" name="subtitle" id="subtitle" class="text ui-widget-content ui-corner-all" />
+		<label for="imgPath">Image Path</label>
+		<input type="text" name="imgPath" id="imgPath" class="text ui-widget-content ui-corner-all" />
+	</fieldset>
+	</form>
+</div>
+<button id="create-content">Create new content</button> -->
+
+<!-- CONTENTS -->
+<div class="fs-nav clearfix">
+	<div class="fs-nav-view">
+	<% _.each(contents, function(content){ %>	
+		<div class="fs-nav-view-item clearfix">
+			<img src="<%=content.get("imgPath")%>" title="<%= content.get("name") %>" />
+			<span class="title"><%= content.get("name") %></span>
+			<span class="text"><%= content.get("subtitle") %></span>
+			<span class="text">Last updated: <%= content.get("lastUpdated") %></span>
+		</div>
+	<% }); %>
+	</div>
+</div>

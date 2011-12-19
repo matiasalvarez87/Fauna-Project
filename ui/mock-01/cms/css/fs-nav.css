@@ -1,0 +1,46 @@
+/* Main container */
+.fs-nav {
+	font-size: 0.9em;
+	color: #000000;
+}
+
+/* Breadcrumb container */
+.fs-nav .fs-nav-breadcrumb {
+
+}
+.fs-nav .fs-nav-breadcrumb .fs-nav-breadcrumb-item {
+	float: left;
+	margin-left: 1em;
+}
+
+/* Content view container */
+.fs-nav .fs-nav-view {
+	
+}
+.fs-nav .fs-nav-view .fs-nav-view-item {
+	margin: 1em 0em 0em 1em;
+	border: 1px solid;
+	border-color: #0073EA;
+	width: 18em;
+	float: left;
+	text-overflow: ellipsis;
+}
+.fs-nav .fs-nav-view .fs-nav-view-item {
+	padding: 0.5em;
+}
+.fs-nav .fs-nav-view .fs-nav-view-item img {
+	float: left;
+	padding-right: 0.5em;
+}
+.fs-nav .fs-nav-view .fs-nav-view-item span.text, .fs-nav .fs-nav-view .fs-nav-view-item span.title{
+	display: block;
+	padding-bottom: 0.5em;
+}
+.fs-nav .fs-nav-view .fs-nav-view-item span.text {
+	font-size: 0.9em;
+}
+.fs-nav .fs-nav-view .fs-nav-view-item span.title{
+	font-weight: bold;
+}
+.fs-nav .fs-nav-view .ui-selecting { background-color: #0073EA; border-color: #0073EA; color: white; }
+.fs-nav .fs-nav-view .ui-selected { background-color: #FF0084; border-color: #FF0084; color: white; }

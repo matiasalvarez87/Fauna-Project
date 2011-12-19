@@ -1,0 +1,15 @@
+<!-- FOLDERS -->
+<div class="breadcrumb">
+	<% _.each(breadcrumb, function(folderName){ %>
+	<a href="#"><%=folderName%></a> >
+	<% }); %>
+</div>
+<div class="folder-container">
+<% _.each(folders, function(folder){ %>
+	<div class="folder-item">
+		<span class="title"><%=folder.get("name")%></span>
+		<span class="contents">(<%=folder.get("innerFolders")%> folders / <%=folder.get("innerContents")%> contents)</span>
+		<span class="details">Last updated: <%=folder.get("lastUpdated")%></span>
+	</div>
+<% }); %>
+</div>
