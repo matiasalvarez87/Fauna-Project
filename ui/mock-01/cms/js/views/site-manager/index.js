@@ -12,7 +12,8 @@ define([
   var siteManagerIndexView = Backbone.View.extend({
     el: $("#site-manager"),
     render: function(){
-      this.el.html(siteManagerIndexTemplate);
+      // this.el.html(siteManagerIndexTemplate); // it doesn't work, research it
+	  $("#site-manager").html(siteManagerIndexTemplate);
 	  
 	  // Appends the nested views
 	  this.appendFolderListView();

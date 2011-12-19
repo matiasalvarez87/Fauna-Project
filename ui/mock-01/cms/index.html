@@ -18,8 +18,6 @@
 	<link rel="stylesheet" href="css/general.css">
 	<link rel="stylesheet" href="css/fs-nav.css">
 
-	<script src="js/libs/jquery/jquery-min.js"></script>
-	<script src="js/libs/jquery/jquery-ui-1.8.16.custom.min.js"></script>
 	<script data-main="js/main" src="js/libs/require/require.js"></script>
 </head>
 <body>
@@ -31,36 +29,14 @@
     <div id="main" role="main">
 	
 		<div id="page">
-			<div id="tabs">
-				<ul>
-					<li><a href="#site-manager" onclick="redirect('#/site-manager');">Site Manager</a></li>
-					<li><a href="#site-repo" onclick="redirect('#/site-repo');">Site Pool Repository</a></li>
-					<li><a href="#content-repo" onclick="redirect('#/content-repo');">Content Repository</a></li>
-				</ul>
-				<div id="site-manager">
-					<p>Loading Site Manager Module...</p>
-				</div>
-				<div id="site-repo">
-					<p>Loading Site Pool Repository Module...</p>
-				</div>
-				<div id="content-repo">
-					<p>Loading Content Repository Module...</p>
-				</div>
-			</div>
+			<p>Loading master view...</p>
 		</div>
 
     </div>
     <footer>
 		<p>CMS Footer</p>
     </footer>
-  </div> <!--! end of #container -->
-
-  <script>
-	$('#tabs').tabs();
-	
-	function redirect(url) {
-		location.href = url;
-	}
-  </script>
+</div> <!--! end of #container -->
+  
 </body>
 </html>
