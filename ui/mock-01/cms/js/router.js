@@ -12,7 +12,7 @@ define([
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
-	  'site-manager': 'showSiteManager',
+	  'site-manager/:type': 'showSiteManager',
 	  'site-repo': 'showSiteRepo',
 	  'content-repo': 'showContentRepo',
 
@@ -26,15 +26,24 @@ define([
 	},
 	
 	// Handlers
-	showSiteManager: function() {
+	showSiteManager: function(type) {
+
+		this.selectTab('site-manager');
 		siteManagerListView.render();
+		
+		// Opens the contents view
+		if (type == 'contents') {
+			siteManagerListView.showAccordionPanel('contents');
+		}
 	},
 	
 	showSiteRepo: function() {
+		this.selectTab('site-repo');
 		siteRepoListView.render();
 	},
 	
 	showContentRepo: function() {
+		this.selectTab('content-repo');
 		contentRepoListView.render();
 	},
 	
@@ -42,7 +51,11 @@ define([
     defaultAction: function(actions){
       // We have no matching route
       this.showSiteManager();
-    }
+    },
+	
+	selectTab: function(tabName) {
+		$('#tabs').tabs('select', tabName);
+	}
   });
 
   var initialize = function(){
